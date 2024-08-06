@@ -171,6 +171,7 @@ heading 'Keyboard Settings'
 echo "$PASSWD" | sudo -S localectl set-x11-keymap us,fi pc105 "" grp:alt_shift_toggle,caps:swapescape > /dev/null
 echo "$PASSWD" | sudo -S sed -i 's/^KEYMAP.*/KEYMAP=us/' /etc/vconsole.conf > /dev/null
 echo "$PASSWD" | sudo -S sed -i 's/^XKBLAYOUT.*/XKBLAYOUT="us"/' /etc/default/keyboard  > /dev/null
+echo "$PASSWD" | sudo -S sed -i 's/^XKBOPTIONS.*/XKBOPTIONS="caps:swapescape"/' /etc/default/keyboard  > /dev/null
 cat /etc/vconsole.conf
 echo ""
 cat /etc/default/keyboard
